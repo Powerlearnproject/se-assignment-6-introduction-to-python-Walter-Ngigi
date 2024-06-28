@@ -38,20 +38,81 @@ To verify the installation, you open command prompt and enter the command "pytho
    - 3.INTEGER ('int'): This are whole numbers. This can be positive or negative.
    -4. FLOATING POINT (float): This are numbers with decimal points.
    -5.OLEANS ('bool'): Booleans represent truth values, they can either be true or false.
-   -6. LIST:('list'): This represents an ordred changable collection of items. It is denoted by square brackets [], a 'list' can be changed, we can add remove or modify the contents of 
-     this data type.
-   7.TUPLE ('tuple'): Just like lists, tuples contain a collection of items, but unlike lists, this cannot be changed or modified after implementation. they are denoted by the 
-     parenthesis().
-   8. SET ('set'):  A set is a collection which is unordered, unchangeable*, and unindexed. * Note: Set items are unchangeable, but you can remove items and add new items. Sets are 
-     denoted 
-     by curly brackets {} or by using the 'set()' function when creating an empty seTt.
-   9.DICTIONARY ('dict'):Unordered, mutable collection of key-value pairs.Example: {'name': 'Alice', 'age': 25}
+   -6. LIST:('list'): This represents an ordred changable collection of items. It is denoted by square brackets [], a 'list' can be changed, we can add remove or modify the contents of this data type.
+      7.TUPLE ('tuple'): Just like lists, tuples contain a collection of items, but unlike lists, this cannot be changed or modified after implementation. they are denoted by the parenthesis().
+   8. SET ('set'):  A set is a collection which is unordered, unchangeable*, and unindexed. * Note: Set items are unchangeable, but you can remove items and add new items. Sets are denoted by curly brackets {} or by using the 'set()' function when creating an empty set.
+   9. DICTIONARY ('dict'):Unordered, mutable collection of key-value pairs.Example: {'name': 'Alice', 'age': 25}
+  
+       
+                  SCRIPT SHOWING DIFFERENT VARIABLES
+      # String: to store the name of the expense
+expense_name = "Groceries"
+
+# Float: to store the amount spent
+expense_amount = 123.45
+
+# String: to store the date of the expense
+expense_date = "2023-06-28"
+
+# Boolean: to indicate whether the expense is recurring
+is_recurring = True
+
+# List: to store multiple expense categories
+expense_categories = ["Groceries", "Utilities", "Rent", "Entertainment"]
+
+# Dictionary: to store expenses with their respective amounts
+expenses = {
+    "Groceries": 123.45,
+    "Utilities": 75.00,
+    "Rent": 950.00,
+    "Entertainment": 50.00
+}
+
+# Print out the expense details
+print("Expense Tracker")
+print("=================")
+print(f"Expense Name: {expense_name}")
+print(f"Expense Amount: ${expense_amount}")
+print(f"Expense Date: {expense_date}")
+print(f"Is Recurring: {is_recurring}")
+print(f"Expense Categories: {expense_categories}")
+print(f"Expenses: {expenses}")
+
+# Example of accessing and modifying dictionary elements
+new_expense = "Transportation"
+new_expense_amount = 40.00
+expenses[new_expense] = new_expense_amount
+
+print("\nUpdated Expenses:")
+for category, amount in expenses.items():
+    print(f"{category}: ${amount}")
 
 5. Control Structures:
-   - Explain the use of conditional statements and loops in Python. Provide examples of an `if-else` statement and a `for` loop.
+   - Explain the use of conditional statements and loops in Python. Provide examples of an `if-else` statement and a `for` loop
+   - Conditional statements allow you to execute different blocks of code based on certain conditions. Eg.
+   - 
+                                           age = 20
+                                        if age >= 18:
+                                       print("Access granted.")
+                                            else:
+                                       print("Access denied. You must be at least 18 years old.")
+   - Loops are used to execute a block of code repeatedly as long as a certain condition is met. The primary loops in Python are for and while loops.
+   -                                        count = 0
+                                           while count < 5:
+                                           print("Count:", count)
+                                           count += 1
 
 6. Functions in Python:
    - What are functions in Python, and why are they useful? Write a Python function that takes two arguments and returns their sum. Include an example of how to call this function.
+   - In Python, functions are blocks of reusable code that perform a specific task. They allow you to break down your program into smaller, manageable pieces, making your code more organized, readable, and easier to maintain. Functions also promote code reusability by enabling you to call the same functionality multiple times without rewriting it, which enhances efficiency and reduces redundancy in your programs.
+   - 
+   -                               def sum_strings(str1, str2):
+                                        return str1 + str2
+                                  str1 = "PLP is a great institution"
+                                  str2 = " the learning experience is very interactive"
+                                  result = sum_strings (str1, str2)
+                                  print(result)
+
 
 7. Lists and Dictionaries:
    - Describe the differences between lists and dictionaries in Python. Write a script that creates a list of numbers and a dictionary with some key-value pairs, then demonstrates basic operations on both.
