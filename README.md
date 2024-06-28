@@ -32,20 +32,20 @@ To verify the installation, you open command prompt and enter the command "pytho
      The third syntax element is, The parentheses () , they are used to enclose the arguments passed to the print() function.
 
 4. Data Types and Variables:
-   - List and describe the basic data types in Python. Write a short script that demonstrates how to create and use variables of different data types.
+   -1. List and describe the basic data types in Python. Write a short script that demonstrates how to create and use variables of different data types.
    -                  BASIC DATA TYPES USED IN PYTHON
-   - STRINGS ('str'): strings contain letters, numbers or symbols enclosed in quotation marks.
-   - INTEGER ('int'): This are whole numbers. This can be positive or negative.
-   - FLOATING POINT (float): This are numbers with decimal points.
-   - BOOLEANS ('bool'): Booleans represent truth values, they can either be true or false.
-   - LIST:('list'): This represents an ordred changable collection of items. It is denoted by square brackets [], a 'list' can be changed, we can add remove or modify the contents of 
+   - 2.STRINGS ('str'): strings contain letters, numbers or symbols enclosed in quotation marks.
+   - 3.INTEGER ('int'): This are whole numbers. This can be positive or negative.
+   -4. FLOATING POINT (float): This are numbers with decimal points.
+   -5.OLEANS ('bool'): Booleans represent truth values, they can either be true or false.
+   -6. LIST:('list'): This represents an ordred changable collection of items. It is denoted by square brackets [], a 'list' can be changed, we can add remove or modify the contents of 
      this data type.
-     TUPLE ('tuple'): Just like lists, tuples contain a collection of items, but unlike lists, this cannot be changed or modified after implementation. they are denoted by the 
+   7.TUPLE ('tuple'): Just like lists, tuples contain a collection of items, but unlike lists, this cannot be changed or modified after implementation. they are denoted by the 
      parenthesis().
-     SET ('set'):  A set is a collection which is unordered, unchangeable*, and unindexed. * Note: Set items are unchangeable, but you can remove items and add new items. Sets are 
+   8. SET ('set'):  A set is a collection which is unordered, unchangeable*, and unindexed. * Note: Set items are unchangeable, but you can remove items and add new items. Sets are 
      denoted 
      by curly brackets {} or by using the 'set()' function when creating an empty seTt.
-     DICTIONARY ('dict'):Unordered, mutable collection of key-value pairs.Example: {'name': 'Alice', 'age': 25}
+   9.DICTIONARY ('dict'):Unordered, mutable collection of key-value pairs.Example: {'name': 'Alice', 'age': 25}
 
 5. Control Structures:
    - Explain the use of conditional statements and loops in Python. Provide examples of an `if-else` statement and a `for` loop.
