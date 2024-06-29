@@ -116,14 +116,93 @@ for category, amount in expenses.items():
 
 7. Lists and Dictionaries:
    - Describe the differences between lists and dictionaries in Python. Write a script that creates a list of numbers and a dictionary with some key-value pairs, then demonstrates basic operations on both.
+   - LISTS: Lists in Python are a data type that represent an ordered changable/ mutable collection of items that can be of different types (integers, strings, objects, etc.).
+   - DICTIONARIES: Dictionaries in Python are a data type that represents unordered collection of items where each item is stored as a key-value pair.
+   - DIFFERENCES BETWEEN THE TWO:
+   -  Lists as stated above are ordered, they mention the order of items as added. Dictionaries on the other hand are not ordered, they do not maintain the order of items.
+   -  Items in a list can be accessed using their index (position in the list), starting from 0. Each item in a dictionary has a key and a value. Keys must be unique and immutable (such as strings, numbers, or tuples), while values can be of any type, items are accessed using keys, not indexes.
+   -                                                 SCRIPT:
+   -                                             # Script 1: Basic List and Dictionary Operations
 
-8. Exception Handling:
+# Creating a list of numbers
+numbers = [1, 2, 3, 4, 5]
+
+# Creating a dictionary with key-value pairs
+student = {
+    'name': 'John Doe',
+    'age': 20,
+    'major': 'Computer Science'
+}
+
+# Basic list operations
+print("Original list:", numbers)
+numbers.append(6)  # Adding an item
+print("List after append:", numbers)
+numbers.remove(3)  # Removing an item
+print("List after remove:", numbers)
+print("First item in the list:", numbers[0])  # Accessing by index
+
+# Basic dictionary operations
+print("\nOriginal dictionary:", student)
+student['age'] = 21  # Modifying a value
+print("Dictionary after modifying 'age':", student)
+student['email'] = 'john.doe@example.com'  # Adding a new key-value pair
+print("Dictionary after adding 'email':", student)
+del student['major']  # Removing a key-value pair
+print("Dictionary after removing 'major':", student)
+print("Student's name:", student['name'])  # Accessing by key
+
+
+9. Exception Handling:
    - What is exception handling in Python? Provide an example of how to use `try`, `except`, and `finally` blocks to handle errors in a Python script.
+   - Exception handling in Python is a way to manage errors and exceptions that occur during program execution. It allows a program to continue running or gracefully terminate instead of crashing abruptly when an error occurs. This is achieved using `try`, `except`, `finally`, and optionally `else` blocks. 
 
-9. Modules and Packages:
+- `try` block:** Contains the code that might raise an exception.
+- `except` block:** Contains the code that runs if an exception occurs in the `try` block.
+- `finally` block:** Contains the code that will always run, regardless of whether an exception occurred or not.
+- `else` block (optional):** Contains the code that will run if no exceptions occur in the `try` block.
+- EXAMPLE
+- ```python
+def divide_numbers(num1, num2):
+    try:
+        # Attempt to divide the two numbers
+        result = num1 / num2
+    except ZeroDivisionError as e:
+        # Handle the division by zero error
+        print(f"Error: Cannot divide by zero. {e}")
+        result = None
+    except TypeError as e:
+        # Handle the type error if non-numeric values are passed
+        print(f"Error: Invalid input types. {e}")
+        result = None
+    else:
+        # Code to execute if no exceptions occur
+        print("Division successful.")
+    finally:
+        # Code that will always execute
+        print("Execution of the division operation is complete.")
+    return result
+
+# Test cases
+print(divide_numbers(10, 2))  # Should print: Division successful. 5.0 Execution of the division operation is complete.
+print(divide_numbers(10, 0))  # Should print: Error: Cannot divide by zero. division by zero Execution of the division operation is complete.
+print(divide_numbers(10, 'a'))  # Should print: Error: Invalid input types. unsupported operand type(s) for /: 'int' and 'str' Execution of the division operation is complete.
+```
+
+ Explanation
+
+- **`try` block:** Attempts to divide `num1` by `num2`. If this succeeds, it moves to the `else` block.
+- **`except` block for `ZeroDivisionError`:** Catches the specific `ZeroDivisionError` if `num2` is zero and prints an error message.
+- **`except` block for `TypeError`:** Catches the specific `TypeError` if either of the inputs is not a number and prints an error message.
+- **`else` block:** Executes only if no exceptions were raised in the `try` block, indicating a successful division.
+- **`finally` block:** Always executes, regardless of whether an exception was raised or not. It is used to perform cleanup actions, like closing files or releasing resources.
+
+This structure ensures that your program can handle errors gracefully and perform any necessary cleanup before continuing execution or terminating.
+
+10. Modules and Packages:
    - Explain the concepts of modules and packages in Python. How can you import and use a module in your script? Provide an example using the `math` module.
 
-10. File I/O:
+11. File I/O:
     - How do you read from and write to files in Python? Write a script that reads the content of a file and prints it to the console, and another script that writes a list of strings to a file.
 
 # Submission Guidelines:
